@@ -1,6 +1,12 @@
 import { makeStyles } from "@material-ui/core";
 
-const SelectButton = ({ children, selected, onClick }) => {
+const SelectButton = ({
+  children,
+  selected,
+  onClick,
+  fullWidth,
+  textAlign,
+}) => {
   const useStyles = makeStyles({
     selectbutton: {
       border: "1px solid cyan",
@@ -13,11 +19,12 @@ const SelectButton = ({ children, selected, onClick }) => {
       backgroundColor: selected ? "cyan" : "",
       color: selected ? "black" : "",
       fontWeight: selected ? 700 : 500,
+      textAlign: textAlign,
       "&:hover": {
         backgroundColor: "cyan",
         color: "black",
       },
-      width: "22%",
+      width: fullWidth ? "100%" : "22%",
       //   margin: 5,
     },
   });

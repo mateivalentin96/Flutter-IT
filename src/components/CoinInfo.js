@@ -3,21 +3,26 @@ import { useEffect, useState } from "react";
 import { HistoricalChart } from "../config/api";
 import { Line } from "react-chartjs-2";
 import {
+  Box,
+  Button,
+  Checkbox,
   CircularProgress,
   createTheme,
   makeStyles,
   ThemeProvider,
+  Typography,
 } from "@material-ui/core";
 import SelectButton from "./SelectButton";
 import { chartDays } from "../config/data";
 import { CryptoState } from "../CryptoContext";
+import LivePreview from "./LivePreview";
 
 const CoinInfo = ({ coin }) => {
   const [historicData, setHistoricData] = useState();
   const [days, setDays] = useState(1);
   const { currency } = CryptoState();
   const [flag, setflag] = useState(false);
-
+  const [isLivePreviewVisible, setIsLivePreviewVisible] = useState(false);
   const useStyles = makeStyles((theme) => ({
     container: {
       width: "75%",
@@ -45,7 +50,9 @@ const CoinInfo = ({ coin }) => {
   };
 
   console.log(coin);
-
+  useEffect(() => {
+    setIsLivePreviewVisible(false);
+  }, [currency]);
   useEffect(() => {
     fetchHistoricData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -63,6 +70,21 @@ const CoinInfo = ({ coin }) => {
   return (
     <ThemeProvider theme={darkTheme}>
       <div className={classes.container}>
+        <Button
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          onClick={() => setIsLivePreviewVisible(!isLivePreviewVisible)}
+        >
+          <Checkbox
+            textAlign="center"
+            checked={isLivePreviewVisible}
+            key={"22"}
+          />
+          <Typography>Live Preview</Typography>
+        </Button>
         {!historicData | (flag === false) ? (
           <CircularProgress
             style={{ color: "cyan" }}
@@ -71,54 +93,70 @@ const CoinInfo = ({ coin }) => {
           />
         ) : (
           <>
-            <Line
-              data={{
-                labels: historicData.map((coin) => {
-                  let date = new Date(coin[0]);
-                  let time =
-                    date.getHours() > 12
-                      ? `${date.getHours() - 12}:${date.getMinutes()} PM`
-                      : `${date.getHours()}:${date.getMinutes()} AM`;
-                  return days === 1 ? time : date.toLocaleDateString();
-                }),
+            {isLivePreviewVisible ? (
+              <LivePreview selectedCoin={coin.symbol} />
+            ) : (
+              <>
+                <Line
+                  data={{
+                    labels: historicData.map((coin) => {
+                      let date = new Date(coin[0]);
+                      let time =
+                        date.getHours() > 12
+                          ? `${date.getHours() - 12}:${date.getMinutes()} PM`
+                          : `${date.getHours()}:${date.getMinutes()} AM`;
+                      return days === 1 ? time : date.toLocaleDateString();
+                    }),
 
-                datasets: [
-                  {
-                    data: historicData.map((coin) => coin[1]),
-                    label: `Price ( Past ${days} Days ) in ${currency}`,
-                    borderColor: "cyan",
-                  },
-                ],
-              }}
-              options={{
-                elements: {
-                  point: {
-                    radius: 1,
-                  },
-                },
-              }}
-            />
-            <div
-              style={{
-                display: "flex",
-                marginTop: 20,
-                justifyContent: "space-around",
-                width: "100%",
-              }}
-            >
-              {chartDays.map((day) => (
-                <SelectButton
-                  key={day.value}
-                  onClick={() => {
-                    setDays(day.value);
-                    setflag(false);
+                    datasets: [
+                      {
+                        data: historicData.map((coin) => coin[1]),
+                        label: `Price ( Past ${days} Days ) in ${currency}`,
+                        borderColor: "cyan",
+                        pointRadius: 3,
+                        backgroundColor: "black",
+                      },
+                    ],
                   }}
-                  selected={day.value === days}
+                  options={{
+                    elements: {
+                      point: {
+                        radius: 1,
+                      },
+                    },
+                  }}
+                />
+                <div
+                  style={{
+                    display: "flex",
+                    marginTop: 20,
+                    justifyContent: "space-around",
+                    width: "100%",
+                  }}
                 >
-                  {day.label}
-                </SelectButton>
-              ))}
-            </div>
+                  {chartDays.map((day) => (
+                    <SelectButton
+                      key={day.value}
+                      onClick={() => {
+                        setDays(day.value);
+                        setflag(false);
+                      }}
+                      selected={day.value === days}
+                    >
+                      {day.label}
+                    </SelectButton>
+                  ))}
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    marginTop: 20,
+                    justifyContent: "space-around",
+                    width: "100%",
+                  }}
+                ></div>{" "}
+              </>
+            )}
           </>
         )}
       </div>
