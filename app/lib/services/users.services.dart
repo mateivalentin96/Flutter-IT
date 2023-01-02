@@ -19,5 +19,6 @@ void getUsers() async {
       Uri.parse('http://ec2-3-84-124-37.compute-1.amazonaws.com/user/'),
       headers: {"Authorization": "Bearer ${await readTokenFromStorage()}"});
   var data = response.body;
+  print("ok");
   print(data);
 }
