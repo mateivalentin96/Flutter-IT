@@ -25,9 +25,7 @@ class MainLayout extends StatelessWidget {
         leading: Builder(
           builder: (BuildContext context) {
             return MaterialButton(
-              child: Ink(
-                width: 35,
-                height: 35,
+              child: Container(
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('images/logo_myPicture.jpg'),
@@ -43,9 +41,8 @@ class MainLayout extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.white,
         title: Container(
-          color: Colors.red,
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
                 children: [

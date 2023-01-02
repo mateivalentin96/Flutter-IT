@@ -17,7 +17,10 @@ class FirstNavigationDrawer extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Bine ai venit,\nVALENTIN MATEI'),
+                Text(
+                  'Bine ai venit,\nVALENTIN MATEI',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
               ],
             ),
           ),

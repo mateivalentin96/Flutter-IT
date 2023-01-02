@@ -8,56 +8,14 @@ class GreyButtonNavDrawer extends StatelessWidget {
     return Container(
       color: Colors.grey,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
+        children: const [
           PreferencesOption(name: 'Administrare profil'),
           PreferencesOption(name: 'Administrare dispozitive'),
-          Container(
-            color: Color.fromARGB(255, 248, 248, 248),
-            margin: EdgeInsets.fromLTRB(0, 1, 0, 0),
-            padding: EdgeInsets.fromLTRB(30, 17, 140, 17),
-            child: Text(
-              'Administrare widget',
-              style: TextStyle(fontSize: 15),
-            ),
-          ),
-          Container(
-            color: Color.fromARGB(255, 248, 248, 248),
-            margin: EdgeInsets.fromLTRB(0, 1, 0, 0),
-            padding: EdgeInsets.fromLTRB(30, 17, 102, 17),
-            child: Text(
-              'Administrare SmartToken',
-              style: TextStyle(fontSize: 15),
-            ),
-          ),
-          Container(
-            color: Color.fromARGB(255, 248, 248, 248),
-            margin: EdgeInsets.fromLTRB(0, 1, 0, 0),
-            padding: EdgeInsets.fromLTRB(30, 17, 125, 17),
-            child: Text(
-              'Administrare notificari',
-              style: TextStyle(fontSize: 15),
-            ),
-          ),
-          Container(
-            color: Color.fromARGB(255, 248, 248, 248),
-            margin: EdgeInsets.fromLTRB(0, 1, 0, 0),
-            padding: EdgeInsets.fromLTRB(30, 17, 165, 17),
-            child: Text(
-              'Documente utile',
-              style: TextStyle(fontSize: 15),
-            ),
-          ),
-          Container(
-            color: Color.fromARGB(255, 248, 248, 248),
-            margin: EdgeInsets.fromLTRB(0, 1, 0, 0),
-            padding: EdgeInsets.fromLTRB(30, 17, 155, 17),
-            child: Text(
-              'Trimite FeedBack',
-              style: TextStyle(fontSize: 15),
-            ),
-          ),
+          PreferencesOption(name: 'Administrare widget'),
+          PreferencesOption(name: 'Administrare SmartToken'),
+          PreferencesOption(name: 'Administrare notificari'),
+          PreferencesOption(name: 'Documente utile'),
+          PreferencesOption(name: 'Trimite FeedBack'),
         ],
       ),
     );
@@ -76,12 +34,19 @@ class PreferencesOption extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
+      alignment: Alignment.centerLeft,
       margin: EdgeInsets.fromLTRB(0, 1, 0, 0),
-      padding: EdgeInsets.fromLTRB(30, 17, 15, 17),
-      child: Text(
-        name,
-        softWrap: true,
-        style: TextStyle(fontSize: 15),
+      child: MaterialButton(
+        onPressed: () {},
+        padding: EdgeInsets.fromLTRB(40, 17, 50, 17),
+        child: Text(
+          name,
+          softWrap: true,
+          style: TextStyle(
+            fontSize: 15,
+          ),
+          textAlign: TextAlign.left,
+        ),
       ),
     );
   }
