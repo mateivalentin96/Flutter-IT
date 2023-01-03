@@ -17,7 +17,7 @@ class _AppLayoutState extends State<AppLayout> {
   String password = '';
   dynamic returnedData = '';
   String token = '';
-
+  bool isSelected = false;
   Widget build(BuildContext context) {
     return token != ""
         ? MainLayout(screen: DashBoard())
@@ -27,6 +27,7 @@ class _AppLayoutState extends State<AppLayout> {
               centerTitle: true,
               backgroundColor: Colors.white,
               title: const Text(''),
+              automaticallyImplyLeading: false,
             ),
             body: SingleChildScrollView(
               child: Column(

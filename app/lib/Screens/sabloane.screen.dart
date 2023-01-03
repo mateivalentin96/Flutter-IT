@@ -4,9 +4,14 @@ import 'package:app/CustomWidgets/Widgets_sabloane/secondWidgetSabloane.dart';
 import 'package:app/CustomWidgets/Widgets_sabloane/thirdWidgetSabloane.dart';
 import 'package:flutter/material.dart';
 
-class Sabloane extends StatelessWidget {
+class Sabloane extends StatefulWidget {
   const Sabloane({super.key});
 
+  @override
+  State<Sabloane> createState() => _SabloaneState();
+}
+
+class _SabloaneState extends State<Sabloane> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
