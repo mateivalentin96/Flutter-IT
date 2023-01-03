@@ -1,13 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class FourthWidgetSabloane extends StatelessWidget {
+class FourthWidgetSabloane extends StatefulWidget {
   const FourthWidgetSabloane(
       {required this.iBan, required this.id, required this.name, super.key});
 
   final String iBan;
   final String name;
   final String id;
+
+  @override
+  State<FourthWidgetSabloane> createState() => _FourthWidgetSabloaneState();
+}
+
+class _FourthWidgetSabloaneState extends State<FourthWidgetSabloane> {
+  bool isSelected = false;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,7 +40,7 @@ class FourthWidgetSabloane extends StatelessWidget {
                       children: [
                         Container(
                           child: Text(
-                            id,
+                            widget.id,
                             style: TextStyle(
                                 fontSize: 17,
                                 color: Color.fromARGB(255, 0, 0, 0)),
@@ -51,7 +58,7 @@ class FourthWidgetSabloane extends StatelessWidget {
                             Container(
                               margin: EdgeInsets.fromLTRB(10, 5, 0, 5),
                               child: Text(
-                                name,
+                                widget.name,
                                 style: TextStyle(
                                     fontSize: 13, fontWeight: FontWeight.w600),
                               ),
@@ -64,7 +71,7 @@ class FourthWidgetSabloane extends StatelessWidget {
                             Container(
                               margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
                               child: Text(
-                                iBan,
+                                widget.iBan,
                                 style:
                                     TextStyle(fontSize: 10, color: Colors.grey),
                               ),
@@ -80,7 +87,16 @@ class FourthWidgetSabloane extends StatelessWidget {
                       children: [
                         IconButton(onPressed: () {}, icon: Icon(Icons.payment)),
                         IconButton(
-                            onPressed: () {}, icon: Icon(Icons.star_outline)),
+                          onPressed: () {
+                            setState(() {
+                              isSelected = !isSelected;
+                            });
+                          },
+                          color: isSelected ? Colors.yellow : Colors.black,
+                          icon: isSelected
+                              ? Icon(Icons.star_rate)
+                              : Icon(Icons.star_outline),
+                        ),
                       ],
                     ),
                   )

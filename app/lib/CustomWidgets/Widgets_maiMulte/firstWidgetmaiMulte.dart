@@ -14,16 +14,21 @@ class FirstWidgetmaiMulte extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: colorWidget,
-      height: 175,
+      height: 179,
       width: 137,
       padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-      child: Column(
-        children: [
-          Container(child: iconWidget),
-          Container(
-            child: Text(nameWidget),
-          )
-        ],
+      child: MaterialButton(
+        onPressed: () {},
+        child: Column(
+          children: [
+            iconWidget,
+            Text(
+              nameWidget,
+              style: TextStyle(fontWeight: FontWeight.normal),
+              textAlign: TextAlign.center,
+            )
+          ],
+        ),
       ),
     );
   }

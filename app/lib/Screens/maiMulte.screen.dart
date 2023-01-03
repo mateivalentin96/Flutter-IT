@@ -22,7 +22,7 @@ class _MaiMulteState extends State<MaiMulte> {
                 nameWidget: 'Blochează card',
                 iconWidget: Icon(
                   Icons.credit_card_off_outlined,
-                  size: 50,
+                  size: 40,
                 ),
                 colorWidget: Color.fromARGB(255, 248, 248, 248),
               ),
@@ -30,7 +30,7 @@ class _MaiMulteState extends State<MaiMulte> {
                 nameWidget: 'Quick Payment',
                 iconWidget: Icon(
                   Icons.paypal_outlined,
-                  size: 50,
+                  size: 40,
                 ),
                 colorWidget: Colors.white,
               ),
@@ -38,7 +38,7 @@ class _MaiMulteState extends State<MaiMulte> {
                 nameWidget: 'Plăți viitoare',
                 iconWidget: Icon(
                   Icons.history,
-                  size: 50,
+                  size: 40,
                 ),
                 colorWidget: Color.fromARGB(255, 248, 248, 248),
               ),
@@ -50,7 +50,7 @@ class _MaiMulteState extends State<MaiMulte> {
                 nameWidget: 'Contracte Debit',
                 iconWidget: Icon(
                   Icons.source_outlined,
-                  size: 50,
+                  size: 40,
                 ),
                 colorWidget: Colors.white,
               ),
@@ -58,7 +58,7 @@ class _MaiMulteState extends State<MaiMulte> {
                 nameWidget: 'Operațiuni Depozite',
                 iconWidget: Icon(
                   Icons.account_balance_outlined,
-                  size: 50,
+                  size: 40,
                 ),
                 colorWidget: Color.fromARGB(255, 248, 248, 248),
               ),
@@ -66,7 +66,7 @@ class _MaiMulteState extends State<MaiMulte> {
                 nameWidget: 'SavingBox',
                 iconWidget: Icon(
                   Icons.savings_outlined,
-                  size: 50,
+                  size: 40,
                 ),
                 colorWidget: Colors.white,
               ),
@@ -78,7 +78,7 @@ class _MaiMulteState extends State<MaiMulte> {
                 nameWidget: 'Planificare\nfinanciară',
                 iconWidget: Icon(
                   Icons.local_atm_outlined,
-                  size: 50,
+                  size: 40,
                 ),
                 colorWidget: Color.fromARGB(255, 248, 248, 248),
               ),
@@ -86,7 +86,7 @@ class _MaiMulteState extends State<MaiMulte> {
                 nameWidget: 'Asigurări',
                 iconWidget: Icon(
                   Icons.beach_access_outlined,
-                  size: 50,
+                  size: 40,
                 ),
                 colorWidget: Colors.white,
               ),
@@ -94,7 +94,7 @@ class _MaiMulteState extends State<MaiMulte> {
                 nameWidget: 'Dobânzi',
                 iconWidget: Icon(
                   Icons.percent_outlined,
-                  size: 50,
+                  size: 40,
                 ),
                 colorWidget: Color.fromARGB(255, 248, 248, 248),
               ),
@@ -106,7 +106,7 @@ class _MaiMulteState extends State<MaiMulte> {
                 nameWidget: 'Curs valutar',
                 iconWidget: Icon(
                   Icons.euro_outlined,
-                  size: 50,
+                  size: 40,
                 ),
                 colorWidget: Colors.white,
               ),
@@ -114,7 +114,7 @@ class _MaiMulteState extends State<MaiMulte> {
                 nameWidget: 'Locator',
                 iconWidget: Icon(
                   Icons.room_outlined,
-                  size: 50,
+                  size: 40,
                 ),
                 colorWidget: Color.fromARGB(255, 248, 248, 248),
               ),
@@ -122,7 +122,7 @@ class _MaiMulteState extends State<MaiMulte> {
                 nameWidget: 'Contact',
                 iconWidget: Icon(
                   Icons.call,
-                  size: 50,
+                  size: 40,
                 ),
                 colorWidget: Colors.white,
               ),

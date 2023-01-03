@@ -17,7 +17,7 @@ class _AppLayoutState extends State<AppLayout> {
   String password = '';
   dynamic returnedData = '';
   String token = '';
-  String alo2 = "";
+
   Widget build(BuildContext context) {
     return token != ""
         ? MainLayout(screen: DashBoard())
