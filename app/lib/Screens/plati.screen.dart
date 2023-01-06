@@ -1,4 +1,4 @@
-import 'package:app/CustomWidgets/Widgets_plati/frontWidget.dart';
+import 'package:app/CustomWidgets/Widgets_plati/firstWidget.dart';
 import 'package:app/CustomWidgets/Widgets_plati/lastWidget.dart';
 import 'package:app/CustomWidgets/Widgets_plati/secondWidget.dart';
 import 'package:app/CustomWidgets/Widgets_plati/thirdWidget.dart';
@@ -23,30 +23,30 @@ class _PlatiState extends State<Plati> {
 
      */
     return Container(
-      child: Container(
-        height: size.height,
-        color: Color.fromARGB(255, 203, 203, 203),
-        child: Column(
-          children: [
-            FrontWidget(),
-            SecondWidget(),
-            ThirdWidget(),
-            LastWidget(
+      height: size.height,
+      color: Color.fromARGB(255, 203, 203, 203),
+      child: Column(
+        children: [
+          FirstWidget(),
+          SecondWidget(
+            account: 'CATRE CONTUL',
+          ),
+          ThirdWidget(),
+          LastWidget(
+            size: size,
+            name: 'Pachet Zero Tot',
+            iban: 'RO98RZBR0000060032051996',
+            ammount: '500.000,00',
+            unit: 'Lei',
+          ),
+          LastWidget(
               size: size,
-              name: 'Pachet Zero Tot',
-              iban: 'RO98RZBR0000060032051996',
-              ammount: '500.000,00',
-              unit: 'Lei',
-            ),
-            LastWidget(
-                size: size,
-                name: 'Cont de Economii',
-                iban: 'RO98RZBR0000060020359961',
-                ammount: '25.000,00',
-                unit: 'USD')
-            /* Text(("${money != null ? money.toString() : ""} RON")) */
-          ],
-        ),
+              name: 'Cont de Economii',
+              iban: 'RO98RZBR0000060020359961',
+              ammount: '25.000,00',
+              unit: 'USD')
+          /* Text(("${money != null ? money.toString() : ""} RON")) */
+        ],
       ),
     );
   }

@@ -8,9 +8,9 @@ class LastNavigationDrawer extends StatelessWidget {
     return Container(
       margin: EdgeInsets.fromLTRB(0, 1, 0, 0),
       child: MaterialButton(
-        onPressed: () => {
+        onPressed: () {
           if (ModalRoute.of(context)?.settings.name != "/")
-            Navigator.pushNamed(context, '/'),
+            Navigator.pushNamed(context, '/');
         },
         padding: EdgeInsets.fromLTRB(15, 10, 0, 10),
         color: Color.fromARGB(255, 254, 230, 0),

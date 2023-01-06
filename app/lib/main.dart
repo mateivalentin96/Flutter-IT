@@ -1,5 +1,7 @@
+import 'package:app/CustomWidgets/Widgets_dashbord/Widgets_YourCards/yourCardsWidget.dart';
 import 'package:app/Layouts/AppLayout.dart';
 import 'package:app/Layouts/MainLayout.dart';
+import 'package:app/Layouts/NewPayment.dart';
 import 'package:app/Screens/dashboard.screen.dart';
 import 'package:app/Screens/maiMulte.screen.dart';
 import 'package:app/Screens/messages.screen.dart';
@@ -33,7 +35,8 @@ class MyApp extends StatelessWidget {
         '/reincarcare': (context) => MainLayout(screen: Reincarcare()),
         '/maiMulte': (context) => MainLayout(screen: MaiMulte()),
         '/messages': (context) => MessagesLayout(screen: Messages()),
-
+        '/newPayment': (context) => NewPayment(),
+        '/yourCardsWidget': (context) => YourCards(),
         // When navigating to the "/second" route, build the SecondScreen widget.
       },
       theme: ThemeData(

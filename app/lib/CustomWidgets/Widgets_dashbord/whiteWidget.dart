@@ -82,7 +82,10 @@ class _WhiteWidgetState extends State<WhiteWidget> {
                     child: Text(widget.greyButtonText),
                   ),
                   MaterialButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      if (ModalRoute.of(context)?.settings.name != "/plati")
+                        Navigator.pushNamed(context, '/plati');
+                    },
                     minWidth: widget.size.width / 3 * 2 - 10,
                     elevation: 0,
                     height: 48,

@@ -14,7 +14,10 @@ class CardsAndSavingWidget extends StatelessWidget {
     return MaterialButton(
         elevation: 0,
         padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-        onPressed: () {},
+        onPressed: () {
+          if (ModalRoute.of(context)?.settings.name != "/yourCardsWidget")
+            Navigator.pushNamed(context, '/yourCardsWidget');
+        },
         child: Container(
             padding: EdgeInsets.fromLTRB(10, 20, 10, 10),
             color: Color.fromARGB(255, 255, 255, 255),

@@ -18,10 +18,6 @@ class Messages extends StatelessWidget {
         child: Column(
           children: [
             FirstWidgetMessages(),
-            FirstWidgetMessages(),
-            FirstWidgetMessages(),
-            FirstWidgetMessages(),
-            FirstWidgetMessages(),
           ],
         ),
       ),
