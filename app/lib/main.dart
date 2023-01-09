@@ -1,3 +1,4 @@
+import 'package:app/CustomWidgets/Widgets_dashbord/Widgets_YourCards/firstCard.dart';
 import 'package:app/CustomWidgets/Widgets_dashbord/Widgets_YourCards/yourCardsWidget.dart';
 import 'package:app/Layouts/AppLayout.dart';
 import 'package:app/Layouts/MainLayout.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var a = 2;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
@@ -37,6 +39,7 @@ class MyApp extends StatelessWidget {
         '/messages': (context) => MessagesLayout(screen: Messages()),
         '/newPayment': (context) => NewPayment(),
         '/yourCardsWidget': (context) => YourCards(),
+        '/firstCard': (context) => FirstCard(),
         // When navigating to the "/second" route, build the SecondScreen widget.
       },
       theme: ThemeData(

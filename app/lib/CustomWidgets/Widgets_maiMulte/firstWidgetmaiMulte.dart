@@ -14,8 +14,8 @@ class FirstWidgetmaiMulte extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: colorWidget,
-      height: 179,
-      width: 137,
+      height: 165,
+      width: 135,
       padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
       child: MaterialButton(
         onPressed: () {},

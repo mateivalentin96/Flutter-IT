@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 import '../../Widgets_plati/Widgets_PachetZeroTot/pachetZeroTotWidget.dart';
@@ -19,7 +17,10 @@ class YourCards extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         backgroundColor: Colors.white,
-        title: const Text('Cardurile tale'),
+        title: const Text(
+          'Cardurile tale',
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -51,20 +52,72 @@ class YourCards extends StatelessWidget {
                     ),
                   ],
                 )),
-            Container(
-                color: Colors.white,
-                padding: EdgeInsets.fromLTRB(10, 5, 20, 5),
-                margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
-                child: Row(
-                  children: [
-                    Container(child: Image.asset('/creditCard.jpg')),
-                    Container(),
-                    Container(),
-                  ],
-                ))
+            MaterialButton(
+              onPressed: () {
+                if (ModalRoute.of(context)?.settings.name != "/firstCard")
+                  Navigator.pushNamed(context, '/firstCard');
+              },
+              child: Container(
+                  margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                  padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                  color: Colors.white,
+                  child: Row(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                        child: Image.asset(
+                          'images/creditCard.jpg',
+                          width: 100,
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.fromLTRB(10, 10, 0, 0),
+                        child: firstCard(),
+                      ),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        child: Icon(
+                          (Icons.arrow_forward_ios),
+                          size: 14,
+                        ),
+                      ),
+                    ],
+                  )),
+            )
           ],
         ),
       ),
+    );
+  }
+}
+
+class firstCard extends StatelessWidget {
+  const firstCard({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'MATEI VALENTIN',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        Text(
+          '4389 **** **** 9193',
+          style: TextStyle(fontSize: 12),
+        ),
+        Text(
+          'Visa Contactless RON',
+          style: TextStyle(fontSize: 10, color: Colors.grey),
+        ),
+        Text('Valabil pana la: iulie 2026',
+            style: TextStyle(fontSize: 10, color: Colors.grey))
+      ],
     );
   }
 }

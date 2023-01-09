@@ -17,6 +17,7 @@ class _AppLayoutState extends State<AppLayout> {
   String password = '';
   dynamic returnedData = '';
   String token = '';
+  dynamic user;
   bool isSelected = false;
   Widget build(BuildContext context) {
     return token != ""
@@ -91,7 +92,7 @@ class _AppLayoutState extends State<AppLayout> {
                         returnedData = await logIn(email, password);
                         if (returnedData['success'] == true) {
                           token = returnedData['token'];
-
+                          user = returnedData['user'];
                           await storeTokenToStorage(token);
                           setState(() {
                             token;

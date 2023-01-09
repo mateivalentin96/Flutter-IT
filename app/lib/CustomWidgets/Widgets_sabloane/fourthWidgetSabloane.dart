@@ -82,7 +82,9 @@ class _FourthWidgetSabloaneState extends State<FourthWidgetSabloane> {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.fromLTRB(78, 0, 0, 0),
+                    color: Colors.white,
+                    padding: EdgeInsets.fromLTRB(20, 0, 30, 0),
+                    alignment: Alignment.centerRight,
                     child: Row(
                       children: [
                         IconButton(onPressed: () {}, icon: Icon(Icons.payment)),

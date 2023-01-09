@@ -3,7 +3,7 @@
     package="com.example.app">
 <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="app"
+        android:label="Smart Mobile"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity

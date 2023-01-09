@@ -8,8 +8,8 @@ import 'package:flutter/cupertino.dart';
 import '../../services/users.services.dart';
 import '../../models/UserModel.dart';
 
-class WhiteWidget extends StatefulWidget {
-  const WhiteWidget({
+class BankAccountWidget extends StatefulWidget {
+  const BankAccountWidget({
     Key? key,
     required this.size,
     required this.greyButtonText,
@@ -25,12 +25,10 @@ class WhiteWidget extends StatefulWidget {
   final String amount;
 
   @override
-  State<WhiteWidget> createState() => _WhiteWidgetState();
+  State<BankAccountWidget> createState() => _BankAccountWidgetState();
 }
 
-User user = User(id: "1", name: "name", age: 21, location: "location");
-
-class _WhiteWidgetState extends State<WhiteWidget> {
+class _BankAccountWidgetState extends State<BankAccountWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
