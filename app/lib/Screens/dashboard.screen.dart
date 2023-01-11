@@ -3,6 +3,7 @@ import 'package:app/CustomWidgets/Widgets_dashbord/depositWidget.dart';
 import 'package:app/CustomWidgets/Widgets_dashbord/footerWidget.dart';
 import 'package:app/services/users.services.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import '../CustomWidgets/Widgets_dashbord/bankAccountWidget.dart';
 
 class DashBoard extends StatefulWidget {
@@ -49,6 +50,9 @@ class _DashBoardState extends State<DashBoard> {
         color: Color.fromARGB(255, 203, 203, 203),
         child: Column(
           children: [
+            bankAccountWidgetList.length == 0
+                ? LinearProgressIndicator()
+                : Text(""),
             ...bankAccountWidgetList,
             DepositWidget(),
             CardsAndSavingWidget(

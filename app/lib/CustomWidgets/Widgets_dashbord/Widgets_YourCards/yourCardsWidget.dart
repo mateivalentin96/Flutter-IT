@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:app/CustomWidgets/Widgets_dashbord/Widgets_YourCards/visaCardWidget.dart';
 import '../../Widgets_plati/Widgets_PachetZeroTot/pachetZeroTotWidget.dart';
 import '../../Widgets_plati/firstWidget.dart';
 import '../../Widgets_plati/lastWidget.dart';
@@ -54,8 +54,8 @@ class YourCards extends StatelessWidget {
                 )),
             MaterialButton(
               onPressed: () {
-                if (ModalRoute.of(context)?.settings.name != "/firstCard")
-                  Navigator.pushNamed(context, '/firstCard');
+                if (ModalRoute.of(context)?.settings.name != "/visaCard")
+                  Navigator.pushNamed(context, '/visaCard');
               },
               child: Container(
                   margin: EdgeInsets.fromLTRB(0, 0, 0, 0),

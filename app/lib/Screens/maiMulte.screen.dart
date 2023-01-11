@@ -11,6 +11,7 @@ class MaiMulte extends StatefulWidget {
 class _MaiMulteState extends State<MaiMulte> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Container(
         color: Color.fromARGB(255, 203, 203, 203),

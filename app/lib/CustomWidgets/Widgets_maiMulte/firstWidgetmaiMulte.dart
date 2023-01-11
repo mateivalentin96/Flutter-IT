@@ -12,10 +12,11 @@ class FirstWidgetmaiMulte extends StatelessWidget {
   final Color colorWidget;
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
       color: colorWidget,
-      height: 165,
-      width: 135,
+      height: size.height / 5.1,
+      width: size.width / 3,
       padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
       child: MaterialButton(
         onPressed: () {},

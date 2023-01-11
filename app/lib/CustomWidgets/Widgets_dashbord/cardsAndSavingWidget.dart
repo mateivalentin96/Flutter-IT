@@ -15,8 +15,8 @@ class CardsAndSavingWidget extends StatelessWidget {
         elevation: 0,
         padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
         onPressed: () {
-          if (ModalRoute.of(context)?.settings.name != "/yourCardsWidget")
-            Navigator.pushNamed(context, '/yourCardsWidget');
+          if (ModalRoute.of(context)?.settings.name != "/yourCards")
+            Navigator.pushNamed(context, '/yourCards');
         },
         child: Container(
             padding: EdgeInsets.fromLTRB(10, 20, 10, 10),
