@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ThirdWidgetSabloane extends StatelessWidget {
-  const ThirdWidgetSabloane({super.key});
+class OperatorWidget extends StatelessWidget {
+  const OperatorWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,24 +9,22 @@ class ThirdWidgetSabloane extends StatelessWidget {
       child: Column(
         children: [
           Container(
-              margin: EdgeInsets.fromLTRB(0, 0, 10, 0),
-              padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+              padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
               child: Container(
                   padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                  color: Colors.grey[200],
+                  color: Color.fromARGB(255, 233, 235, 234),
                   margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Container(
-                            padding: EdgeInsets.fromLTRB(10, 13, 0, 13),
+                            padding: EdgeInsets.fromLTRB(10, 15, 0, 10),
                             margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
                             child: Text(
-                              'Toate sabloanele',
+                              'OPERATOR',
                               style: TextStyle(
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.bold,
-                                  color: Color.fromARGB(255, 0, 0, 0)),
+                                  fontSize: 12,
+                                  color: Color.fromARGB(255, 85, 85, 85)),
                             ))
                       ])))
         ],

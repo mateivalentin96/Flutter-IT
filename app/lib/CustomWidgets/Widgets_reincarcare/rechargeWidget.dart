@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LastWidgetReincarcare extends StatelessWidget {
-  const LastWidgetReincarcare(
+class RechargeWidget extends StatelessWidget {
+  const RechargeWidget(
       {required this.logo, required this.nameOperator, super.key});
 
   final String logo;

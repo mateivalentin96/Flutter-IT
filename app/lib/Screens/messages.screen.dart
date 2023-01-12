@@ -1,4 +1,4 @@
-import 'package:app/CustomWidgets/Widgets_messagesAndGifts/firstWidgetMessages.dart';
+import 'package:app/CustomWidgets/Widgets_messagesAndGifts/messagesAndGiftsWidget.dart';
 import 'package:flutter/material.dart';
 
 class Messages extends StatelessWidget {
@@ -17,7 +17,7 @@ class Messages extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            FirstWidgetMessages(),
+            MessagesAndGiftsWidget(),
           ],
         ),
       ),

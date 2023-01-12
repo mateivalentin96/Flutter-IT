@@ -1,17 +1,17 @@
-import 'package:app/CustomWidgets/Widgets_sabloane/firstWidgetSabloane.dart';
+import 'package:app/CustomWidgets/Widgets_sabloane/favoriteWidget.dart';
 import 'package:app/CustomWidgets/Widgets_sabloane/fourthWidgetSabloane.dart';
 import 'package:app/CustomWidgets/Widgets_sabloane/secondWidgetSabloane.dart';
-import 'package:app/CustomWidgets/Widgets_sabloane/thirdWidgetSabloane.dart';
+import 'package:app/CustomWidgets/Widgets_sabloane/allTemplatesWidget.dart';
 import 'package:flutter/material.dart';
 
-class Sabloane extends StatefulWidget {
-  const Sabloane({super.key});
+class Template extends StatefulWidget {
+  const Template({super.key});
 
   @override
-  State<Sabloane> createState() => _SabloaneState();
+  State<Template> createState() => _TemplateState();
 }
 
-class _SabloaneState extends State<Sabloane> {
+class _TemplateState extends State<Template> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -22,9 +22,9 @@ class _SabloaneState extends State<Sabloane> {
         color: Color.fromARGB(255, 203, 203, 203),
         child: Column(
           children: [
-            FirstWidgetSabloane(),
+            FavoriteWidget(),
             SecondWidgetSabloane(),
-            ThirdWidgetSabloane(),
+            AllTemplatesWidget(),
             FourthWidgetSabloane(
               name: 'Calu',
               id: ' E ',

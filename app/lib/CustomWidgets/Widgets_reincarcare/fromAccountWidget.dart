@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ThirdWidgetReincarcare extends StatelessWidget {
-  const ThirdWidgetReincarcare({super.key});
+class FromAccountWidget extends StatelessWidget {
+  const FromAccountWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +9,7 @@ class ThirdWidgetReincarcare extends StatelessWidget {
       child: Column(
         children: [
           Container(
-              padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+              padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
               child: Container(
                   padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                   color: Color.fromARGB(255, 233, 235, 234),
@@ -18,10 +18,10 @@ class ThirdWidgetReincarcare extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Container(
-                            padding: EdgeInsets.fromLTRB(10, 15, 0, 10),
-                            margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                            padding: EdgeInsets.fromLTRB(10, 5, 0, 5),
+                            margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
                             child: Text(
-                              'OPERATOR',
+                              'DIN CONTUL',
                               style: TextStyle(
                                   fontSize: 12,
                                   color: Color.fromARGB(255, 85, 85, 85)),

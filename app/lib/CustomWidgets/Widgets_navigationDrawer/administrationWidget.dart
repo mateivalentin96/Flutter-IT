@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class GreyButtonNavDrawer extends StatelessWidget {
-  const GreyButtonNavDrawer({super.key});
+class AdministrationWidget extends StatelessWidget {
+  const AdministrationWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

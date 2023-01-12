@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class FirstWidgetmaiMulte extends StatelessWidget {
-  const FirstWidgetmaiMulte(
+class MoreWidget extends StatelessWidget {
+  const MoreWidget(
       {required this.nameWidget,
       required this.colorWidget,
       required this.iconWidget,

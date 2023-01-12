@@ -3,9 +3,9 @@ import 'package:app/CustomWidgets/Widgets_plati/secondWidget.dart';
 import 'package:app/main.dart';
 import 'package:flutter/material.dart';
 
-import '../CustomWidgets/Widgets_plati/firstWidget.dart';
-import '../CustomWidgets/Widgets_plati/lastWidget.dart';
-import '../CustomWidgets/Widgets_plati/thirdWidget.dart';
+import '../CustomWidgets/Widgets_plati/scanWidget.dart';
+import '../CustomWidgets/Widgets_plati/accountWidget.dart';
+import '../CustomWidgets/Widgets_plati/chooseAccountWidget.dart';
 
 class NewPayment extends StatefulWidget {
   const NewPayment({key, required this.selectedBankAccount}) : super(key: key);
@@ -30,9 +30,9 @@ class _NewPaymentState extends State<NewPayment> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            FirstWidget(),
+            ScanWidget(),
             SecondWidget(account: 'DIN CONTUL'),
-            LastWidget(
+            AccountWidget(
                 size: size,
                 name: "Pachet",
                 iban: selectedBankAccount["id"].toString(),

@@ -1,7 +1,8 @@
-import 'package:app/CustomWidgets/Widgets_navigationDrawer/firstNavigationDrawer.dart';
-import 'package:app/CustomWidgets/Widgets_navigationDrawer/lastNavigationDrawer.dart';
-import 'package:app/CustomWidgets/Widgets_navigationDrawer/secondNavigationDrawer.dart';
-import 'package:app/CustomWidgets/Widgets_navigationDrawer/thirdNavigationDrawer.dart';
+import 'package:app/CustomWidgets/Widgets_navigationDrawer/welcomeWidget.dart';
+import 'package:app/CustomWidgets/Widgets_navigationDrawer/exitWidget.dart';
+import 'package:app/CustomWidgets/Widgets_navigationDrawer/preferencesWidget.dart';
+import 'package:app/CustomWidgets/Widgets_navigationDrawer/administrationWidget.dart';
+import 'package:app/models/UserModelTest.dart';
 import 'package:flutter/material.dart';
 
 class NavigationDrawer extends StatefulWidget {
@@ -18,10 +19,10 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
         color: Color.fromARGB(255, 213, 213, 213),
         child: Column(
           children: [
-            FirstNavigationDrawer(),
-            SecondNavigationDrawer(),
-            GreyButtonNavDrawer(),
-            LastNavigationDrawer()
+            WelcomeWidget(),
+            PreferencesWidget(),
+            AdministrationWidget(),
+            ExitWidget()
           ],
         ));
   }

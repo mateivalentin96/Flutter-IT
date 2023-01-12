@@ -1,7 +1,7 @@
-import 'package:app/CustomWidgets/Widgets_plati/firstWidget.dart';
-import 'package:app/CustomWidgets/Widgets_plati/lastWidget.dart';
+import 'package:app/CustomWidgets/Widgets_plati/scanWidget.dart';
+import 'package:app/CustomWidgets/Widgets_plati/accountWidget.dart';
 import 'package:app/CustomWidgets/Widgets_plati/secondWidget.dart';
-import 'package:app/CustomWidgets/Widgets_plati/thirdWidget.dart';
+import 'package:app/CustomWidgets/Widgets_plati/chooseAccountWidget.dart';
 import 'package:app/main.dart';
 import 'package:app/models/UserModelTest.dart';
 import 'package:flutter/cupertino.dart';
@@ -35,7 +35,7 @@ class _PlatiState extends State<Plati> {
     Size size = MediaQuery.of(context).size;
     var bankAccountWidgetList = [
       if (user != null)
-        ...user['bank_account'].map((ba) => LastWidget(
+        ...user['bank_account'].map((ba) => AccountWidget(
               name: 'Cont economii ${ba["currency"]}',
               iban: "RO" + ba['id'].toString().toUpperCase(),
               ammount: '${ba["amount"]}',
@@ -49,11 +49,11 @@ class _PlatiState extends State<Plati> {
       color: Color.fromARGB(255, 203, 203, 203),
       child: Column(
         children: [
-          FirstWidget(),
+          ScanWidget(),
           SecondWidget(
             account: 'CATRE CONTUL',
           ),
-          ThirdWidget(),
+          ChooseAccountWidget(),
           ...bankAccountWidgetList,
 
           /* Text(("${money != null ? money.toString() : ""} RON")) */

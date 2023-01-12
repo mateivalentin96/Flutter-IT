@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LastNavigationDrawer extends StatelessWidget {
-  const LastNavigationDrawer({super.key});
+class ExitWidget extends StatelessWidget {
+  const ExitWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

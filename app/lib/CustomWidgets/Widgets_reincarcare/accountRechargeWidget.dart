@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SecondWidgetReincarcare extends StatelessWidget {
-  const SecondWidgetReincarcare({super.key});
+class AccountRechargeWidget extends StatelessWidget {
+  const AccountRechargeWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

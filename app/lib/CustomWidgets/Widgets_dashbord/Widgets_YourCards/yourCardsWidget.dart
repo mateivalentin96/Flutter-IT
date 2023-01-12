@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:app/CustomWidgets/Widgets_dashbord/Widgets_YourCards/visaCardWidget.dart';
 import '../../Widgets_plati/Widgets_PachetZeroTot/pachetZeroTotWidget.dart';
-import '../../Widgets_plati/firstWidget.dart';
-import '../../Widgets_plati/lastWidget.dart';
+import '../../Widgets_plati/scanWidget.dart';
+import '../../Widgets_plati/accountWidget.dart';
 import '../../Widgets_plati/secondWidget.dart';
 
 class YourCards extends StatelessWidget {

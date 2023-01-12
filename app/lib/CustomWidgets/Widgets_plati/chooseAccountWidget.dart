@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class FourthWidgetReincarcare extends StatelessWidget {
-  const FourthWidgetReincarcare({super.key});
+class ChooseAccountWidget extends StatelessWidget {
+  const ChooseAccountWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Container(
-        padding: EdgeInsets.fromLTRB(10, 16, 10, 16),
+        padding: EdgeInsets.fromLTRB(18, 18, 10, 18),
         color: Colors.white,
         child: Row(
           children: [
-            Text('Alege operatorul',
+            Text('Alege contul',
                 style: TextStyle(
                     fontSize: 12, color: Color.fromARGB(255, 147, 147, 147)))
           ],
@@ -21,7 +21,7 @@ class FourthWidgetReincarcare extends StatelessWidget {
           border: Border.all(
         width: 1,
       )),
-      margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
+      margin: EdgeInsets.fromLTRB(10, 5, 10, 0),
     );
   }
 }

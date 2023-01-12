@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class ThirdWidget extends StatelessWidget {
-  const ThirdWidget({super.key});
+class ChooseOperatorWidget extends StatelessWidget {
+  const ChooseOperatorWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Container(
-        padding: EdgeInsets.fromLTRB(18, 18, 10, 18),
+        padding: EdgeInsets.fromLTRB(10, 16, 10, 16),
         color: Colors.white,
         child: Row(
           children: [
-            Text('Alege contul',
+            Text('Alege operatorul',
                 style: TextStyle(
                     fontSize: 12, color: Color.fromARGB(255, 147, 147, 147)))
           ],
@@ -21,7 +21,7 @@ class ThirdWidget extends StatelessWidget {
           border: Border.all(
         width: 1,
       )),
-      margin: EdgeInsets.fromLTRB(10, 5, 10, 0),
+      margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
     );
   }
 }

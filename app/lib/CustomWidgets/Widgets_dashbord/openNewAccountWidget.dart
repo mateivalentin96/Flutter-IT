@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:cupertino_icons/cupertino_icons.dart';
 
-class FooterWidget extends StatelessWidget {
-  const FooterWidget({super.key});
+class OpenNewAccountWidget extends StatelessWidget {
+  const OpenNewAccountWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

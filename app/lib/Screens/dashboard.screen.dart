@@ -1,6 +1,6 @@
 import 'package:app/CustomWidgets/Widgets_dashbord/cardsAndSavingWidget.dart';
 import 'package:app/CustomWidgets/Widgets_dashbord/depositWidget.dart';
-import 'package:app/CustomWidgets/Widgets_dashbord/footerWidget.dart';
+import 'package:app/CustomWidgets/Widgets_dashbord/openNewAccountWidget.dart';
 import 'package:app/services/users.services.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -62,7 +62,7 @@ class _DashBoardState extends State<DashBoard> {
               cardsAndSavingText: 'SavingBox',
               imageWidget: 'images/logo3.jpg',
             ),
-            FooterWidget(),
+            OpenNewAccountWidget(),
           ],
         ),
       ),

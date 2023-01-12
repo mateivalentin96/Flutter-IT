@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LastWidget extends StatelessWidget {
-  const LastWidget({
+class AccountWidget extends StatelessWidget {
+  const AccountWidget({
     super.key,
     required this.size,
     required this.name,

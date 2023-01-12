@@ -4,11 +4,11 @@ import 'package:app/Layouts/AppLayout.dart';
 import 'package:app/Layouts/MainLayout.dart';
 import 'package:app/Layouts/NewPayment.dart';
 import 'package:app/Screens/dashboard.screen.dart';
-import 'package:app/Screens/maiMulte.screen.dart';
+import 'package:app/Screens/more.screen.dart';
 import 'package:app/Screens/messages.screen.dart';
 import 'package:app/Screens/plati.screen.dart';
-import 'package:app/Screens/reincarcare.screen.dart';
-import 'package:app/Screens/sabloane.screen.dart';
+import 'package:app/Screens/recharge.screen.dart';
+import 'package:app/Screens/template.screen.dart';
 import 'package:app/services/share_preferences.service.dart';
 import 'package:flutter/material.dart';
 
@@ -44,9 +44,9 @@ class MyApp extends StatelessWidget {
         '/plati': (context) => MainLayout(
             screen:
                 Plati(updateSelectedBankAccount: updateSelectedBankAccount)),
-        '/sabloane': (context) => MainLayout(screen: Sabloane()),
-        '/reincarcare': (context) => MainLayout(screen: Reincarcare()),
-        '/maiMulte': (context) => MainLayout(screen: MaiMulte()),
+        '/sabloane': (context) => MainLayout(screen: Template()),
+        '/reincarcare': (context) => MainLayout(screen: Recharge()),
+        '/maiMulte': (context) => MainLayout(screen: More()),
         '/messages': (context) => MessagesLayout(screen: Messages()),
         '/newPayment': (context) =>
             NewPayment(selectedBankAccount: selectedBankAccount),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SecondNavigationDrawer extends StatelessWidget {
-  const SecondNavigationDrawer({super.key});
+class PreferencesWidget extends StatelessWidget {
+  const PreferencesWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

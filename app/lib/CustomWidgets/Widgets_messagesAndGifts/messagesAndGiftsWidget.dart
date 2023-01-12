@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class FirstWidgetMessages extends StatelessWidget {
-  const FirstWidgetMessages({super.key});
+class MessagesAndGiftsWidget extends StatelessWidget {
+  const MessagesAndGiftsWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

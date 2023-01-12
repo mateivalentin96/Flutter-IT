@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class FirstWidgetSabloane extends StatelessWidget {
-  const FirstWidgetSabloane({super.key});
+class FavoriteWidget extends StatelessWidget {
+  const FavoriteWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

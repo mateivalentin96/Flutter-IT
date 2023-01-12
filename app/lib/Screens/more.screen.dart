@@ -1,14 +1,14 @@
-import 'package:app/CustomWidgets/Widgets_maiMulte/firstWidgetmaiMulte.dart';
+import 'package:app/CustomWidgets/Widgets_more/moreWidget.dart';
 import 'package:flutter/material.dart';
 
-class MaiMulte extends StatefulWidget {
-  const MaiMulte({super.key});
+class More extends StatefulWidget {
+  const More({super.key});
 
   @override
-  State<MaiMulte> createState() => _MaiMulteState();
+  State<More> createState() => _MoreState();
 }
 
-class _MaiMulteState extends State<MaiMulte> {
+class _MoreState extends State<More> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -20,7 +20,7 @@ class _MaiMulteState extends State<MaiMulte> {
           children: [
             Row(
               children: [
-                FirstWidgetmaiMulte(
+                MoreWidget(
                   nameWidget: 'Blochează card',
                   iconWidget: Icon(
                     Icons.credit_card_off_outlined,
@@ -28,7 +28,7 @@ class _MaiMulteState extends State<MaiMulte> {
                   ),
                   colorWidget: Color.fromARGB(255, 248, 248, 248),
                 ),
-                FirstWidgetmaiMulte(
+                MoreWidget(
                   nameWidget: 'Quick Payment',
                   iconWidget: Icon(
                     Icons.paypal_outlined,
@@ -36,7 +36,7 @@ class _MaiMulteState extends State<MaiMulte> {
                   ),
                   colorWidget: Colors.white,
                 ),
-                FirstWidgetmaiMulte(
+                MoreWidget(
                   nameWidget: 'Plăți viitoare',
                   iconWidget: Icon(
                     Icons.history,
@@ -48,7 +48,7 @@ class _MaiMulteState extends State<MaiMulte> {
             ),
             Row(
               children: [
-                FirstWidgetmaiMulte(
+                MoreWidget(
                   nameWidget: 'Contracte Debit',
                   iconWidget: Icon(
                     Icons.source_outlined,
@@ -56,7 +56,7 @@ class _MaiMulteState extends State<MaiMulte> {
                   ),
                   colorWidget: Colors.white,
                 ),
-                FirstWidgetmaiMulte(
+                MoreWidget(
                   nameWidget: 'Operațiuni Depozite',
                   iconWidget: Icon(
                     Icons.account_balance_outlined,
@@ -64,7 +64,7 @@ class _MaiMulteState extends State<MaiMulte> {
                   ),
                   colorWidget: Color.fromARGB(255, 248, 248, 248),
                 ),
-                FirstWidgetmaiMulte(
+                MoreWidget(
                   nameWidget: 'SavingBox',
                   iconWidget: Icon(
                     Icons.savings_outlined,
@@ -76,7 +76,7 @@ class _MaiMulteState extends State<MaiMulte> {
             ),
             Row(
               children: [
-                FirstWidgetmaiMulte(
+                MoreWidget(
                   nameWidget: 'Planificare\nfinanciară',
                   iconWidget: Icon(
                     Icons.local_atm_outlined,
@@ -84,7 +84,7 @@ class _MaiMulteState extends State<MaiMulte> {
                   ),
                   colorWidget: Color.fromARGB(255, 248, 248, 248),
                 ),
-                FirstWidgetmaiMulte(
+                MoreWidget(
                   nameWidget: 'Asigurări',
                   iconWidget: Icon(
                     Icons.beach_access_outlined,
@@ -92,7 +92,7 @@ class _MaiMulteState extends State<MaiMulte> {
                   ),
                   colorWidget: Colors.white,
                 ),
-                FirstWidgetmaiMulte(
+                MoreWidget(
                   nameWidget: 'Dobânzi',
                   iconWidget: Icon(
                     Icons.percent_outlined,
@@ -104,7 +104,7 @@ class _MaiMulteState extends State<MaiMulte> {
             ),
             Row(
               children: [
-                FirstWidgetmaiMulte(
+                MoreWidget(
                   nameWidget: 'Curs valutar',
                   iconWidget: Icon(
                     Icons.euro_outlined,
@@ -112,7 +112,7 @@ class _MaiMulteState extends State<MaiMulte> {
                   ),
                   colorWidget: Colors.white,
                 ),
-                FirstWidgetmaiMulte(
+                MoreWidget(
                   nameWidget: 'Locator',
                   iconWidget: Icon(
                     Icons.room_outlined,
@@ -120,7 +120,7 @@ class _MaiMulteState extends State<MaiMulte> {
                   ),
                   colorWidget: Color.fromARGB(255, 248, 248, 248),
                 ),
-                FirstWidgetmaiMulte(
+                MoreWidget(
                   nameWidget: 'Contact',
                   iconWidget: Icon(
                     Icons.call,
