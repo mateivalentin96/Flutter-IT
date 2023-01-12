@@ -41,7 +41,7 @@ class _PlatiState extends State<Plati> {
               ammount: '${ba["amount"]}',
               size: size,
               unit: "${ba["currency"]}",
-              updateSelectedBankAccount: widget.updateSelectedBankAccount,
+              pressAction: widget.updateSelectedBankAccount,
             ))
     ];
     return Container(

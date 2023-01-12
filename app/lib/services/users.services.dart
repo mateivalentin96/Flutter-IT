@@ -6,11 +6,13 @@ import "package:http/http.dart" as http;
 
 import 'share_preferences.service.dart';
 
-void getUsers() async {
+dynamic getUsers() async {
   var response = await http.get(
       Uri.parse('http://ec2-3-84-124-37.compute-1.amazonaws.com/user/'),
       headers: {"Authorization": "Bearer ${await readTokenFromStorage()}"});
   var data = response.body;
+  var formattedData = jsonDecode(data);
+  return formattedData;
 }
 
 dynamic getMe() async {

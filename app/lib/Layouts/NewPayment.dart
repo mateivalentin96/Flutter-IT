@@ -1,11 +1,13 @@
 import 'package:app/CustomWidgets/Widgets_plati/Widgets_PachetZeroTot/pachetZeroTotWidget.dart';
 import 'package:app/CustomWidgets/Widgets_plati/secondWidget.dart';
 import 'package:app/main.dart';
+import 'package:app/services/transactions.service.dart';
 import 'package:flutter/material.dart';
 
 import '../CustomWidgets/Widgets_plati/scanWidget.dart';
 import '../CustomWidgets/Widgets_plati/accountWidget.dart';
 import '../CustomWidgets/Widgets_plati/chooseAccountWidget.dart';
+import '../services/users.services.dart';
 
 class NewPayment extends StatefulWidget {
   const NewPayment({key, required this.selectedBankAccount}) : super(key: key);
@@ -15,10 +17,48 @@ class NewPayment extends StatefulWidget {
 }
 
 class _NewPaymentState extends State<NewPayment> {
+  dynamic users;
+  List bankAccounts = [];
+  dynamic bankAccountsWidgetList = [];
+  void getUsersLocal() async {
+    users = await getUsers();
+    print(users);
+    if (users != null) {
+      users.forEach((user) => {
+            user["bank_account"].forEach((ba) => {bankAccounts.add(ba)})
+          });
+    }
+
+    setState(() {
+      bankAccounts;
+    });
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getUsersLocal();
+  }
+
+  void sendMoneyLocal(bankAccountParam) async {
+    var resp = await sendMoney("", "", 50);
+    print(resp);
+  }
+
   @override
   Widget build(BuildContext context) {
     String email;
     Size size = MediaQuery.of(context).size;
+    if (bankAccounts.length != 0) {
+      bankAccountsWidgetList = bankAccounts.map((ba) => AccountWidget(
+          size: size,
+          name: "Pachet",
+          iban: ba["id"].toString(),
+          ammount: "",
+          unit: ba["currency"].toString(),
+          pressAction: sendMoneyLocal));
+    }
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 213, 213, 213),
       appBar: AppBar(
@@ -38,9 +78,10 @@ class _NewPaymentState extends State<NewPayment> {
                 iban: selectedBankAccount["id"].toString(),
                 ammount: selectedBankAccount["amount"].toString(),
                 unit: selectedBankAccount["currency"].toString(),
-                updateSelectedBankAccount: updateSelectedBankAccount),
+                pressAction: updateSelectedBankAccount),
             SecondWidget(account: 'IN CONTUL'),
-            PachetZeroTot()
+            PachetZeroTot(),
+            if (bankAccounts.length != 0) ...bankAccountsWidgetList,
           ],
         ),
       ),
