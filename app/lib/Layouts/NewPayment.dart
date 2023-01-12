@@ -1,5 +1,6 @@
 import 'package:app/CustomWidgets/Widgets_plati/Widgets_PachetZeroTot/pachetZeroTotWidget.dart';
 import 'package:app/CustomWidgets/Widgets_plati/secondWidget.dart';
+import 'package:app/main.dart';
 import 'package:flutter/material.dart';
 
 import '../CustomWidgets/Widgets_plati/firstWidget.dart';
@@ -7,8 +8,8 @@ import '../CustomWidgets/Widgets_plati/lastWidget.dart';
 import '../CustomWidgets/Widgets_plati/thirdWidget.dart';
 
 class NewPayment extends StatefulWidget {
-  const NewPayment({super.key});
-
+  const NewPayment({key, required this.selectedBankAccount}) : super(key: key);
+  final Map<String, String> selectedBankAccount;
   @override
   State<NewPayment> createState() => _NewPaymentState();
 }
@@ -33,10 +34,11 @@ class _NewPaymentState extends State<NewPayment> {
             SecondWidget(account: 'DIN CONTUL'),
             LastWidget(
                 size: size,
-                name: 'Pachet Zero Tot',
-                iban: 'RO98RZBR0000060032051996',
-                ammount: '500.000,00',
-                unit: 'Lei'),
+                name: "Pachet",
+                iban: selectedBankAccount["id"].toString(),
+                ammount: selectedBankAccount["amount"].toString(),
+                unit: selectedBankAccount["currency"].toString(),
+                updateSelectedBankAccount: updateSelectedBankAccount),
             SecondWidget(account: 'IN CONTUL'),
             PachetZeroTot()
           ],

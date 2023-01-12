@@ -18,6 +18,15 @@ void main() {
   runApp(const MyApp());
 }
 
+var selectedBankAccount = {
+  "id": "",
+  "amount": "",
+  "currency": "",
+};
+void updateSelectedBankAccount(newBankAccount) {
+  selectedBankAccount = newBankAccount;
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -32,12 +41,15 @@ class MyApp extends StatelessWidget {
         // When navigating to the "/" route, build the FirstScreen widget.
         '/': (context) => AppLayout(),
         '/dashboard': (context) => MainLayout(screen: DashBoard()),
-        '/plati': (context) => MainLayout(screen: Plati()),
+        '/plati': (context) => MainLayout(
+            screen:
+                Plati(updateSelectedBankAccount: updateSelectedBankAccount)),
         '/sabloane': (context) => MainLayout(screen: Sabloane()),
         '/reincarcare': (context) => MainLayout(screen: Reincarcare()),
         '/maiMulte': (context) => MainLayout(screen: MaiMulte()),
         '/messages': (context) => MessagesLayout(screen: Messages()),
-        '/newPayment': (context) => NewPayment(),
+        '/newPayment': (context) =>
+            NewPayment(selectedBankAccount: selectedBankAccount),
         '/yourCards': (context) => YourCards(),
         '/visaCard': (context) => VisaCard(),
 

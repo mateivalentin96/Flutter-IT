@@ -8,6 +8,7 @@ class LastWidget extends StatelessWidget {
     required this.iban,
     required this.ammount,
     required this.unit,
+    required this.updateSelectedBankAccount,
   });
 
   final Size size;
@@ -15,6 +16,7 @@ class LastWidget extends StatelessWidget {
   final String iban;
   final String ammount;
   final String unit;
+  final Function updateSelectedBankAccount;
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +26,8 @@ class LastWidget extends StatelessWidget {
       padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
       child: MaterialButton(
         onPressed: () {
+          updateSelectedBankAccount(
+              {"id": iban, "amount": ammount.toString(), "currency": unit});
           if (ModalRoute.of(context)?.settings.name != "/newPayment")
             Navigator.pushNamed(context, '/newPayment');
         },
