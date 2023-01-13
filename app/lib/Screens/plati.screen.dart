@@ -37,7 +37,7 @@ class _PlatiState extends State<Plati> {
       if (user != null)
         ...user['bank_account'].map((ba) => AccountWidget(
               name: 'Cont economii ${ba["currency"]}',
-              iban: "RO" + ba['id'].toString().toUpperCase(),
+              iban: ba['id'].toString(),
               ammount: '${ba["amount"]}',
               size: size,
               unit: "${ba["currency"]}",

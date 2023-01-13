@@ -9,7 +9,6 @@ import 'package:app/Screens/messages.screen.dart';
 import 'package:app/Screens/plati.screen.dart';
 import 'package:app/Screens/recharge.screen.dart';
 import 'package:app/Screens/template.screen.dart';
-import 'package:app/services/share_preferences.service.dart';
 import 'package:flutter/material.dart';
 
 import 'Layouts/MessagesLayout.dart';
@@ -32,7 +31,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var a = 2;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',

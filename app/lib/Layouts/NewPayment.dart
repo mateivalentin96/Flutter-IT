@@ -19,6 +19,7 @@ class NewPayment extends StatefulWidget {
 class _NewPaymentState extends State<NewPayment> {
   dynamic users;
   List bankAccounts = [];
+  dynamic newSelectedBankAccount = null;
   dynamic bankAccountsWidgetList = [];
   void getUsersLocal() async {
     users = await getUsers();
@@ -42,7 +43,20 @@ class _NewPaymentState extends State<NewPayment> {
   }
 
   void sendMoneyLocal(bankAccountParam) async {
-    var resp = await sendMoney("", "", 50);
+    var resp = await sendMoney({
+      "senderBankAccountId": selectedBankAccount["id"],
+      "recipientBankAccountId": bankAccountParam["id"],
+      "amount": 50,
+    });
+    if (resp['success']) {
+      setState(() {
+        newSelectedBankAccount = {
+          "id": resp['data'][1]["id"].toString(),
+          "amount": resp['data'][1]["amount"].toString(),
+          "currency": resp['data'][1]["currency"].toString(),
+        };
+      });
+    }
     print(resp);
   }
 
@@ -76,7 +90,9 @@ class _NewPaymentState extends State<NewPayment> {
                 size: size,
                 name: "Pachet",
                 iban: selectedBankAccount["id"].toString(),
-                ammount: selectedBankAccount["amount"].toString(),
+                ammount: newSelectedBankAccount == null
+                    ? selectedBankAccount["amount"].toString()
+                    : newSelectedBankAccount["amount"].toString(),
                 unit: selectedBankAccount["currency"].toString(),
                 pressAction: updateSelectedBankAccount),
             SecondWidget(account: 'IN CONTUL'),
