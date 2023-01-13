@@ -1,7 +1,7 @@
-import 'package:app/CustomWidgets/Widgets_sabloane/favoriteWidget.dart';
-import 'package:app/CustomWidgets/Widgets_sabloane/fourthWidgetSabloane.dart';
-import 'package:app/CustomWidgets/Widgets_sabloane/secondWidgetSabloane.dart';
-import 'package:app/CustomWidgets/Widgets_sabloane/allTemplatesWidget.dart';
+import 'package:app/CustomWidgets/Widgets_template/favoriteWidget.dart';
+import 'package:app/CustomWidgets/Widgets_template/fourthWidgetSabloane.dart';
+import 'package:app/CustomWidgets/Widgets_template/initialWidget.dart';
+import 'package:app/CustomWidgets/Widgets_template/allTemplatesWidget.dart';
 import 'package:flutter/material.dart';
 
 class Template extends StatefulWidget {
@@ -23,7 +23,7 @@ class _TemplateState extends State<Template> {
         child: Column(
           children: [
             FavoriteWidget(),
-            SecondWidgetSabloane(),
+            InitialWidget(),
             AllTemplatesWidget(),
             FourthWidgetSabloane(
               name: 'Calu',

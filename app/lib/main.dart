@@ -3,14 +3,14 @@ import 'package:app/CustomWidgets/Widgets_dashbord/Widgets_YourCards/yourCardsWi
 import 'package:app/Layouts/AppLayout.dart';
 import 'package:app/Layouts/MainLayout.dart';
 import 'package:app/Layouts/NewPayment.dart';
+import 'package:app/Layouts/NewPayment2.dart';
 import 'package:app/Screens/dashboard.screen.dart';
 import 'package:app/Screens/more.screen.dart';
 import 'package:app/Screens/messages.screen.dart';
-import 'package:app/Screens/plati.screen.dart';
+import 'package:app/Screens/payment.screen.dart';
 import 'package:app/Screens/recharge.screen.dart';
 import 'package:app/Screens/template.screen.dart';
 import 'package:flutter/material.dart';
-
 import 'Layouts/MessagesLayout.dart';
 
 void main() {
@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
         '/dashboard': (context) => MainLayout(screen: DashBoard()),
         '/plati': (context) => MainLayout(
             screen:
-                Plati(updateSelectedBankAccount: updateSelectedBankAccount)),
+                Payment(updateSelectedBankAccount: updateSelectedBankAccount)),
         '/sabloane': (context) => MainLayout(screen: Template()),
         '/reincarcare': (context) => MainLayout(screen: Recharge()),
         '/maiMulte': (context) => MainLayout(screen: More()),
@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
             NewPayment(selectedBankAccount: selectedBankAccount),
         '/yourCards': (context) => YourCards(),
         '/visaCard': (context) => VisaCard(),
-
+        '/newPayment2': (context) => NewPayment2(),
         // When navigating to the "/second" route, build the SecondScreen widget.
       },
       theme: ThemeData(

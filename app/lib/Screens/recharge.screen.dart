@@ -1,8 +1,8 @@
-import 'package:app/CustomWidgets/Widgets_reincarcare/fromAccountWidget.dart';
-import 'package:app/CustomWidgets/Widgets_reincarcare/chooseOperatorWidget.dart';
-import 'package:app/CustomWidgets/Widgets_reincarcare/rechargeWidget.dart';
-import 'package:app/CustomWidgets/Widgets_reincarcare/accountRechargeWidget.dart';
-import 'package:app/CustomWidgets/Widgets_reincarcare/operatorWidget.dart';
+import 'package:app/CustomWidgets/Widgets_recharge/fromAccountWidget.dart';
+import 'package:app/CustomWidgets/Widgets_recharge/chooseOperatorWidget.dart';
+import 'package:app/CustomWidgets/Widgets_recharge/rechargeWidget.dart';
+import 'package:app/CustomWidgets/Widgets_recharge/accountRechargeWidget.dart';
+import 'package:app/CustomWidgets/Widgets_recharge/operatorWidget.dart';
 import 'package:flutter/material.dart';
 
 class Recharge extends StatefulWidget {

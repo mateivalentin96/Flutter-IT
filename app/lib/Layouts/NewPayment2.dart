@@ -1,23 +1,27 @@
-import 'package:app/CustomWidgets/Widgets_payment/Widgets_PachetZeroTot/pachetZeroTotWidget.dart';
-import 'package:app/CustomWidgets/Widgets_payment/secondWidget.dart';
+import 'package:app/CustomWidgets/Widgets_payment/Widgets_NewPayment/amountWidget.dart';
+import 'package:app/CustomWidgets/Widgets_payment/Widgets_NewPayment/desciptionWidget.dart';
+import 'package:app/CustomWidgets/Widgets_payment/Widgets_NewPayment/descriptionTextWidget.dart';
+import 'package:app/CustomWidgets/Widgets_payment/Widgets_NewPayment/ibanNameWidget.dart';
+import 'package:app/CustomWidgets/Widgets_payment/Widgets_NewPayment/sendWidget.dart';
 import 'package:app/main.dart';
-import 'package:app/services/transactions.service.dart';
 import 'package:flutter/material.dart';
-
-import '../CustomWidgets/Widgets_payment/scanWidget.dart';
+import '../CustomWidgets/Widgets_payment/Widgets_PachetZeroTot/pachetZeroTotWidget.dart';
 import '../CustomWidgets/Widgets_payment/accountWidget.dart';
-import '../CustomWidgets/Widgets_payment/chooseAccountWidget.dart';
+import '../CustomWidgets/Widgets_payment/scanWidget.dart';
+import '../CustomWidgets/Widgets_payment/secondWidget.dart';
+import '../services/transactions.service.dart';
 import '../services/users.services.dart';
 
-class NewPayment extends StatefulWidget {
-  const NewPayment({key, required this.selectedBankAccount}) : super(key: key);
-  final Map<String, String> selectedBankAccount;
+class NewPayment2 extends StatefulWidget {
+  const NewPayment2({super.key});
+
   @override
-  State<NewPayment> createState() => _NewPaymentState();
+  State<NewPayment2> createState() => _NewPayment2State();
 }
 
-class _NewPaymentState extends State<NewPayment> {
+class _NewPayment2State extends State<NewPayment2> {
   dynamic users;
+
   List bankAccounts = [];
   dynamic newSelectedBankAccount = null;
   dynamic bankAccountsWidgetList = [];
@@ -62,8 +66,8 @@ class _NewPaymentState extends State<NewPayment> {
 
   @override
   Widget build(BuildContext context) {
-    String email;
     Size size = MediaQuery.of(context).size;
+    String description;
     if (bankAccounts.length != 0) {
       bankAccountsWidgetList = bankAccounts.map((ba) => AccountWidget(
           size: size,
@@ -76,28 +80,30 @@ class _NewPaymentState extends State<NewPayment> {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 213, 213, 213),
       appBar: AppBar(
-        elevation: 0,
         centerTitle: true,
         backgroundColor: Colors.white,
-        title: const Text('Plata noua'),
+        title: const Text(
+          'Plata noua',
+          style: TextStyle(fontSize: 15),
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            ScanWidget(),
             SecondWidget(account: 'DIN CONTUL'),
             AccountWidget(
                 size: size,
                 name: "Pachet",
-                iban: selectedBankAccount["id"].toString(),
-                ammount: newSelectedBankAccount == null
-                    ? selectedBankAccount["amount"].toString()
-                    : newSelectedBankAccount["amount"].toString(),
-                unit: selectedBankAccount["currency"].toString(),
-                pressAction: updateSelectedBankAccount),
+                iban: "RO98BTRL0000000098760234",
+                ammount: "9000",
+                unit: "EUR",
+                pressAction: sendMoneyLocal),
             SecondWidget(account: 'IN CONTUL'),
-            PachetZeroTot(),
-            if (bankAccounts.length != 0) ...bankAccountsWidgetList,
+            ibanNameWidget(),
+            amountUnitWidget(),
+            desciptionWidget(description: 'DESCRIERE'),
+            descriptionTextWidget(),
+            sendWidget()
           ],
         ),
       ),

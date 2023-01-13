@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:app/CustomWidgets/Widgets_dashbord/Widgets_YourCards/visaCardWidget.dart';
-import '../../Widgets_plati/Widgets_PachetZeroTot/pachetZeroTotWidget.dart';
-import '../../Widgets_plati/scanWidget.dart';
-import '../../Widgets_plati/accountWidget.dart';
-import '../../Widgets_plati/secondWidget.dart';
+import '../../Widgets_payment/Widgets_PachetZeroTot/pachetZeroTotWidget.dart';
+import '../../Widgets_payment/scanWidget.dart';
+import '../../Widgets_payment/accountWidget.dart';
+import '../../Widgets_payment/secondWidget.dart';
 
 class YourCards extends StatelessWidget {
   const YourCards({super.key});

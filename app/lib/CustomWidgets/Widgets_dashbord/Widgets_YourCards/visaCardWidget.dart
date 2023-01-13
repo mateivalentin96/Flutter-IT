@@ -1,4 +1,4 @@
-import 'package:app/CustomWidgets/Widgets_plati/secondWidget.dart';
+import 'package:app/CustomWidgets/Widgets_payment/secondWidget.dart';
 import 'package:flutter/material.dart';
 
 class VisaCard extends StatelessWidget {
